@@ -12,3 +12,9 @@ BATSRUS/
 data/
 Output/*
 Scripts/*
+
+.pylibs/ 
+__pycache__/
+ACTION_ITEMS.md
+CLAUDE.md
+AGENTS.md

@@ -284,8 +284,8 @@ def get_stereo_lookup_table(start_date,end_date,**kwargs):
         return
 
     # Check input ranges.
-    if (start_date < dt.datetime(2007,1,1) or end_date > dt.datetime(2019,12,1)) and spacecraft == 'A':
-        print('Error: Date range must be between 2007.01.01 and 2019.12.01 for STEREO-A.')
+    if (start_date < dt.datetime(2007,1,1) or end_date > dt.datetime(2026,1,31)) and spacecraft == 'A':
+        print('Error: Date range must be between 2007.01.01 and 2026.01.31 for STEREO-A.')
         return
     elif (start_date < dt.datetime(2007,1,1) or end_date > dt.datetime(2014,9,1)) and spacecraft == 'B':
         print('Error: Date range must be between 2007.01.01 and 2014.09.01 for STEREO-B.')

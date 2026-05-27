@@ -12,8 +12,10 @@ BATSRUS/
 data/
 Output/*
 Scripts/*
+*.log
 
-.pylibs/ 
+tmp/
+.pylibs/
 __pycache__/
 TODO.md
 CLAUDE.md

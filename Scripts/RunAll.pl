@@ -178,7 +178,9 @@ ascii         TypeFile
     close $out;
     
     # Execute the code.
-    qx(cd $rundir; mpiexec -n 2 ./BATSRUS.exe > runlog);
+    my $tmpdir = "$ENV{PWD}/tmp";
+    qx(mkdir -p $tmpdir);
+    qx(cd $rundir; TMPDIR=$tmpdir mpiexec -n 2 ./BATSRUS.exe > runlog);
 
     # Process the results.
     qx(rm -rf $output/$month_string);

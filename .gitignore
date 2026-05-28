@@ -12,6 +12,8 @@ BATSRUS/
 data/
 Output/*
 Scripts/*
+!Scripts/export_website_data.py
+!Scripts/flatten_output.sh
 *.log
 
 tmp/

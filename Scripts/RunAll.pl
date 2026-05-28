@@ -15,8 +15,8 @@ my $gitclone = './BATSRUS/share/Scripts/gitclone -s';
 my $rundir = './BATSRUS/run';
 my $output = './Output';
 my $input  = './Input';
-my $earliest_date = 200001;
-my $earliest_year = 2000;
+my $earliest_date = 199803;
+my $earliest_year = 1998;
 my $start_year = int(substr($start_date,0,4));
 my $end_year = int(substr($end_date,0,4));
 my $start_month = int(substr($start_date,4,6));
@@ -66,7 +66,7 @@ foreach my $year ($earliest_year..$start_year)
 {
     foreach my $month (1..12)
     {
-	if ($year * 100 + $month < int($start_date))
+	if ($year * 100 + $month >= int($earliest_date) and $year * 100 + $month < int($start_date))
 	{
 	    push(@restart_months, sprintf("%04d%02d\n",$year,$month));
 	}
@@ -180,7 +180,7 @@ ascii         TypeFile
     # Execute the code.
     my $tmpdir = "$ENV{PWD}/tmp";
     qx(mkdir -p $tmpdir);
-    qx(cd $rundir; TMPDIR=$tmpdir mpiexec -n 2 ./BATSRUS.exe > runlog);
+    qx(cd $rundir; TMPDIR=$tmpdir mpiexec -n 8 ./BATSRUS.exe > runlog);
 
     # Process the results.
     qx(rm -rf $output/$month_string);

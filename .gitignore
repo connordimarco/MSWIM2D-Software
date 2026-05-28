@@ -17,6 +17,8 @@ Scripts/*
 tmp/
 .pylibs/
 __pycache__/
-TODO.md
 CLAUDE.md
 AGENTS.md
+
+Output_flat/
+Website_data/

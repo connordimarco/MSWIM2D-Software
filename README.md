@@ -1,4 +1,4 @@
-Copyright (C) 2025 Regents of the University of Michigan,
+Copyright (C) 2026 Regents of the University of Michigan,
 portions used with permission.
 
 Michigan Solar Wind Model in 2D
